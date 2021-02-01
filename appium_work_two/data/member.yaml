@@ -1,0 +1,3 @@
+add_member:
+  - [ 'name_test','777777@163.com' ]
+  - [ 'name_test','777778@163.com' ]
