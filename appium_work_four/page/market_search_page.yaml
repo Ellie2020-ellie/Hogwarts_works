@@ -1,0 +1,4 @@
+search:
+  - action: find_and_input
+  - locator: [ id,"com.xueqiu.android:id/search_input_text" ]
+  - input: "ellie"
