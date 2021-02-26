@@ -11,6 +11,7 @@ class BasePage:
     def find_and_click(self, locator):
         self.find(locator).click()
 
+
     def find_and_input(self, locator, input_info):
         self.find(locator).send_keys(input_info)
 
