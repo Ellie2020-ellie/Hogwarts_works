@@ -1,0 +1,10 @@
+create_member:
+  name: "张三2"
+  userid: "zhangsan2"
+  department: [ 1 ]
+  mobile: "+86 13800900001"
+update_member:
+  name: "张三3"
+  userid: "zhangsan2"
+delete_member:
+  userid: "zhangsan2"

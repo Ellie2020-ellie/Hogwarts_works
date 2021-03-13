@@ -1,13 +1,9 @@
-"""
-对应于该图的拓扑排序。每一个有向无环图都至少存在一种拓扑排序。
-"""
 import pysnooper
 from typing import Mapping
 
-
 @pysnooper.snoop()
-def topological_sort(graph: Mapping):
-    # in_degrees = {'a': 0, 'b': 0, 'c': 0, 'd': 0, 'e': 0, 'f': 0}
+def topological_sort(graph:Mapping):
+# in_degrees = {'a': 0, 'b': 0, 'c': 0, 'd': 0, 'e': 0, 'f': 0}
     in_degrees = dict((u, 0) for u in graph)
     for u in graph:
         for v in graph[u]:  # 根据键找出值也就是下级节点
@@ -24,16 +20,15 @@ def topological_sort(graph: Mapping):
                 Q.append(v)
     return in_degrees_zero
 
-
 if __name__ == '__main__':
-    # 用字典的键值表示图的节点之间的关系，键当前节点。值是后续节点。
+# 用字典的键值表示图的节点之间的关系，键当前节点。值是后续节点。
     graph_dict = {
-        'a': 'bf',  # 表示 a 指向 b 和 f
-        'b': 'cdf',
-        'c': 'd',
-        'd': 'ef',
-        'e': 'f',
-        'f': ''}
+            'a': 'bf',  # 表示 a 指向 b 和 f
+            'b': 'cdf',
+            'c': 'd',
+            'd': 'ef',
+            'e': 'f',
+            'f': ''}
 
     t = topological_sort(graph_dict)
     print(t)
