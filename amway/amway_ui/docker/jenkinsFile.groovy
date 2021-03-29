@@ -15,7 +15,7 @@ pipeline {
         stage('输入内容') {
             steps {
                 sh '''
-                    echo '$docker_image_name  +>>>>test>>>+   $docker_container_name'
+                    echo '${docker_image_name}  +>>>>test>>>+   $docker_container_name'
                     echo ${chrome}
                 '''
             }
