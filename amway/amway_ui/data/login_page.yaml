@@ -1,0 +1,7 @@
+login_success:
+  login_user:
+    locator: [ 'css selector','.login-panel>div.loginCenter-main-page>div.account-login-main.login-main-panel>.login-name>input','59401661' ]
+  login_password:
+    locator: [ 'css selector','.login-panel>div.loginCenter-main-page>div.account-login-main.login-main-panel>.login-password>input','966966' ]
+  login_btn:
+    locator: [ 'css selector','.login-btn' ]

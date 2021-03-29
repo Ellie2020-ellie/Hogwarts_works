@@ -29,4 +29,6 @@ class App(BasePage):
     def goto_main(self):
         # 模拟黑名单页面
         self.driver.find_element(MobileBy.ID, "com.xueqiu.android:id/post_status").click()
+        # self.driver.find_elements_by_accessibility_id()
+
         return MainPage(self.driver)

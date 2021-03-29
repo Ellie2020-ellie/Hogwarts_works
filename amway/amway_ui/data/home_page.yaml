@@ -1,0 +1,7 @@
+search_product:
+  search_product_input:
+    locator: [ 'css selector','.nav-box>.search-input>input',40299 ]
+  click_search:
+    locator: [ 'css selector','.nav-box>.search-input>button' ]
+goto_car:
+  locator: [ 'css selector' ,'.header-right>.user-cart' ]

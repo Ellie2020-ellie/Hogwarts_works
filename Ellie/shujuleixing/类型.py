@@ -1,10 +1,10 @@
-def number():
+def test_number():
     p = '1, 3, 4'
     y = p.split(',')
     print(y)
 
 
-def list_():
+def test_list_():
     a = [1, 2, 3, 8, 2]
     b = [1, 2, 4, 5, 6, 7]
     z = set(a) & set(b)

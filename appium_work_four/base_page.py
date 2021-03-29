@@ -20,6 +20,7 @@ class BasePage:
 
     @handle_black
     def find(self, locator):
+
         return self.driver.find_element(*locator)
 
     def scroll_find_click(self, text):

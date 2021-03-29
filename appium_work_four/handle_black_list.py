@@ -3,7 +3,7 @@ import yaml
 
 def handle_black(fun):
     def run(*args, **kwargs):
-        with open('../data/black_list.yaml', 'r') as f:
+        with open('./data/black_list.yaml', 'r') as f:
             black_lists = yaml.safe_load(f)
             try:
                 return fun(*args, **kwargs)

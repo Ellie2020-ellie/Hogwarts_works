@@ -1,4 +1,5 @@
 import re
+from filecmp import cmp
 
 
 def first_m():
@@ -10,7 +11,6 @@ def frist_m_two():
     arr = "hello world".split(" ")
     new_str = f"{arr[0].capitalize()} {arr[1].capitalize()}"
     print(new_str)
-
 
 
 # 检查是否是纯数字
@@ -28,7 +28,8 @@ def return_str():
     print(s1.lower())
     print(s1.upper())
 
-# 去掉首尾字符串
+
+# 去掉首尾空字符串
 def strip_function():
     s1 = " adBbdw "
     print(s1.strip())
@@ -56,4 +57,10 @@ def str_split():
 
 
 if __name__ == '__main__':
-    strip_function()
+    dict = {'runoob': '菜鸟教程', 'google': 'Google 搜索'}
+
+    print("Value : %s" % dict.setdefault('runoob', None))
+    print("Value : %s" % dict.setdefault('Google_one', '淘宝'))
+    # 该值包含 Taobao
+    for k, v in dict.items():
+        print(k, v)

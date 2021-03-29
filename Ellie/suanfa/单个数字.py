@@ -2,7 +2,6 @@ def find_single(l: list):
     result = 0
     for v in l:
         result ^= v
-        print('>>>>>>>..', result )
         if result == 0:
             print("没有落单元素")
         else:

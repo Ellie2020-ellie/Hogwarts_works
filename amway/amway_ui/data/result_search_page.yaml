@@ -1,0 +1,3 @@
+add_product_to_car:
+  click_add_car:
+    locator: [ 'css selector','.box>.cart>i' ]
