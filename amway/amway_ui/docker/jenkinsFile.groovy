@@ -16,7 +16,7 @@ pipeline {
             steps {
                 sh '''
                     echo '$docker_image_name  +>>>>test>>>+   $docker_container_name'
-                    echo ${WORKSPACE}
+                    echo ${chrome}
                 '''
             }
         }
