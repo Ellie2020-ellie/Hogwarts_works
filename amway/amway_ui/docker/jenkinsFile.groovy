@@ -4,7 +4,7 @@ pipeline {
     }
     agent {
         node {
-            label 'my-slave_01'
+            label 'slave_01'
             customWorkspace '/data/Server/Node'
         }
     }
