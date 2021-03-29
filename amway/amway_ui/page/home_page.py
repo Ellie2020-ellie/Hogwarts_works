@@ -14,7 +14,7 @@ def handle_black(fun):
                     if len(black_count) > 0:
                         black_count[0].click()
             except Exception as msg:
-                fun(*args, **kwargs)
+                print(msg)
             finally:
                 fun(*args, **kwargs)
 

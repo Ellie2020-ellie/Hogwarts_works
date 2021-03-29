@@ -31,14 +31,18 @@ browsers = [
     DesiredCapabilities.CHROME
 ]
 
+host = 'http://14.116.252.165:8084/wd/hub'
+host_localhost = 'http://localhost:4444/wd/hub'
+
 
 class BasePage:
     def __init__(self, driver: WebDriver = None):
         if driver is None:
-            self.driver = webdriver.Remote(command_executor='http://localhost:4444/wd/hub',
-                                           desired_capabilities=DesiredCapabilities.CHROME)
+            self.driver = webdriver.Remote(command_executor=host,
+                                           desired_capabilities=DesiredCapabilities.FIREFOX)
             self.driver.get(_url)
-            self.driver.maximize_window()
+            # self.driver.maximize_window()
+            self.driver.set_window_size(1080, 800)
             self.driver.implicitly_wait(8)
         else:
             self.driver = driver
@@ -52,3 +56,6 @@ class BasePage:
 
     def find_and_click(self, locator, path):
         self.find(locator, path).click()
+
+    def quit(self):
+        self.driver.quit()

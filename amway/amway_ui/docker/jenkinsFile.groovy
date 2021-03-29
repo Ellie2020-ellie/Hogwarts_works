@@ -2,10 +2,20 @@ pipeline {
     agent {
         label 'slave_01'
     }
+    environment{
+        docker_image_name='amway'
+        docker_container_name='amway'
+    }
     stages {
-        stage('Hello') {
+        stage('同步源码') {
             steps {
-                echo 'Hello World'
+                git url:'git@github.com:Ellie2020-ellie/Hogwarts_works.git'
+            }
+        }
+        stage('输入内容') {
+            steps {
+                echo '$docker_image_name  +>>>>test>>>+   $docker_container_name'
+                echo ${WORKSPACE}
             }
         }
     }
