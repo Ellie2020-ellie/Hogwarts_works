@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        lable 'slave_01'
+    }
     stages {
         stage('Hello') {
             steps {
