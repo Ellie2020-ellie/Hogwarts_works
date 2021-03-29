@@ -7,7 +7,7 @@ pipeline {
         docker_container_name='amway'
     }
     parameters{
-	string(name:'branch',defaultValue:'master',descroption:'git branch')
+	string(name:'branch',defaultValue:'master',description:'git branch')
     }
     stages {
         stage('同步源码') {
