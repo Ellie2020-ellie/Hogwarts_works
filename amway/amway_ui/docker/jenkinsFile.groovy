@@ -14,8 +14,10 @@ pipeline {
         }
         stage('输入内容') {
             steps {
-                echo '$docker_image_name  +>>>>test>>>+   $docker_container_name'
-                echo ${WORKSPACE}
+                sh '''
+                    echo '$docker_image_name  +>>>>test>>>+   $docker_container_name'
+                    echo ${WORKSPACE}
+                '''
             }
         }
     }
