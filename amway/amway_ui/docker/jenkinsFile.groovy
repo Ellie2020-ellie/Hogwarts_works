@@ -6,13 +6,11 @@ pipeline {
         docker_image_name='amway'
         docker_container_name='amway'
     }
-    parameters{
-	string(name:'branch',defaultValue:'master',description:'git branch')
-    }
+
     stages {
         stage('同步源码') {
             steps {
-                git url:'git@github.com:Ellie2020-ellie/Hogwarts_works.git', branch: '$branch'
+                git url:'git@github.com:Ellie2020-ellie/Hogwarts_works.git'
             }
         }
         stage('输入内容') {
