@@ -2,6 +2,12 @@ pipeline {
     agent {
         label 'slave_01'
     }
+    agent {
+        node {
+            label 'my-slave_01'
+            customWorkspace '/data/Server/Node'
+        }
+    }
     environment{
         docker_image_name='amway'
         docker_container_name='amway'
@@ -18,9 +24,8 @@ pipeline {
                 sh '''
                     . ~/.bash_profile
                     echo '$?????????>>>>>>>>>>'
-                    echo '$docker_container_name'
+                    echo "$docker_container_name"
                     echo ${chrome}
-                    echo ${pwd}
                 '''
             }
         }
